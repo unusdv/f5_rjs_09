@@ -1,0 +1,122 @@
+@mixin f-style($fSize, $fColor, $fWeight ) {
+    font-size: $fSize;
+    color: $fColor;
+    font-weight: $fWeight;
+}
+
+.todo-container {
+    position: relative;
+    width: 580px;
+    height: 400px;
+    margin: 60px auto 0;
+    border-radius: 5px;
+    padding: 7px 5px;
+    box-shadow: 0 0 5px gray;
+    background-color: rgb(29, 28, 28);
+
+}
+
+.create__task-form {
+    width: 100%;
+}
+
+.create__task-form>form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 0px 5px;
+
+    input {
+        flex: 1;
+        height: 50px;
+        border: none;
+        outline: none;
+        border: 1px solid #fff;
+        background: transparent;
+        text-indent: 15px;
+        border-radius: 5px;
+        @include f-style(20px, #fff, 500);
+    }
+
+    button {
+        @include f-style(20px, #fff, 500);
+        border: none;
+        border-radius: 5px;
+        padding: 14px 20px;
+        background-color: #007BFF;
+    }
+}
+
+
+// Edit Modal Styles
+.edit__modal-card {
+    position: relative;
+    position: absolute;
+    top: calc(25%);
+    left: 60px;
+
+    width: 450px;
+    height: 150px;
+    padding: 10px;
+    border: 5px;
+    background-color: rgb(48, 45, 45);
+
+    form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        input {
+            width: 100%;
+            height: 45px;
+            font-size: 18px;
+            color: #fff;
+            outline: none;
+            background: transparent;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            text-indent: 10px;
+        }
+
+        .edit-btn {
+            padding: 6px 70px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 5px;
+            background: transparent;
+            transition: 0.2s;
+
+            &:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+                background-color: #19c519;
+                color: #ffffff;
+                border: 1px solid #19c519;
+            }
+        }
+    }
+}
+
+.close-modal {
+    top: -10px;
+    right: -7px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 22px;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+}

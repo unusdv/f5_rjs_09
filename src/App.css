@@ -1,0 +1,7 @@
+body{
+    background-color: #252323;
+    font-family: sans-serif;
+}
+::-webkit-scrollbar{
+    display: none;
+}
